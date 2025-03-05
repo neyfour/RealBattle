@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Combat - Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game canvas for 3D rendering -->
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Game UI overlay -->
+        <div class="game-ui">
+            <div class="player-stats">
+                <div class="health-bar">
+                    <div class="health-label">Health</div>
+                    <div class="health-value" id="player-health">100</div>
+                </div>
+                <div class="experience-bar">
+                    <div class="experience-label">XP</div>
+                    <div class="experience-value" id="player-xp">0</div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="attack-btn">Attack</button>
+                <button id="special-btn">Special Ability</button>
+            </div>
+        </div>
+        
+        <!-- Game over screen (initially hidden) -->
+        <div class="game-over" id="game-over" style="display: none;">
+            <h2 id="game-result">Victory!</h2>
+            <p id="game-stats">You defeated all enemies!</p>
+            <button id="return-to-menu">Return to Menu</button>
+        </div>
+    </div>
+    
+    <!-- Load jMonkeyEngine applet -->
+    <script src="js/game-client.js"></script>
+</body>
+</html>

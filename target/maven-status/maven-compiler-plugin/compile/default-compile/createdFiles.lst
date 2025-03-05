@@ -1,0 +1,14 @@
+GameService\GameSession.class
+Controller\CreateSessionServlet.class
+Model\Enemy.class
+client\GameClient.class
+GameService\GameSession$GameState.class
+Controller\GameWebSocket.class
+Model\Enemy$EnemyType.class
+GameService\GameSessionManager.class
+Model\Player.class
+Model\Player$PlayerType.class
+Model\Character.class
+com\realbattle\JakartaRestConfiguration.class
+com\realbattle\resources\JakartaEE10Resource.class
+Controller\JoinSessionServlet.class

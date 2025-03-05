@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Combat - 3D Multiplayer Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-title">
+            <h1>Fantasy Combat</h1>
+            <p>A 3D multiplayer adventure</p>
+        </div>
+        
+        <div class="menu">
+            <div class="menu-item" id="start-game">
+                <h2>Start Game</h2>
+                <p>Create a new game session</p>
+            </div>
+            
+            <div class="menu-item" id="join-game">
+                <h2>Join Game</h2>
+                <p>Enter an existing session code</p>
+            </div>
+            
+            <div class="menu-item" id="cancel-session">
+                <h2>Cancel Session</h2>
+                <p>End your current game session</p>
+            </div>
+        </div>
+        
+        <!-- Player creation form (initially hidden) -->
+        <div class="player-form" id="player-form" style="display: none;">
+            <h2>Create Your Character</h2>
+            
+            <div class="form-group">
+                <label for="player-name">Character Name:</label>
+                <input type="text" id="player-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Character Type:</label>
+                <div class="character-selection">
+                    <div class="character-option" data-type="KNIGHT">
+                        <img src="assets/knight.png" alt="Knight">
+                        <h3>Knight</h3>
+                        <p>Strong defense, melee combat</p>
+                    </div>
+                    <div class="character-option" data-type="WIZARD">
+                        <img src="assets/wizard.png" alt="Wizard">
+                        <h3>Wizard</h3>
+                        <p>Powerful magic attacks</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button id="create-player">Create Character</button>
+                <button id="cancel-player">Cancel</button>
+            </div>
+        </div>
+        
+        <!-- Session join form (initially hidden) -->
+        <div class="join-form" id="join-form" style="display: none;">
+            <h2>Join Existing Game</h2>
+            
+            <div class="form-group">
+                <label for="session-id">Session Code:</label>
+                <input type="text" id="session-id" required>
+            </div>
+            
+            <div class="form-actions">
+                <button id="join-session">Join Session</button>
+                <button id="cancel-join">Cancel</button>
+            </div>
+        </div>
+        
+        <!-- Session information (initially hidden) -->
+        <div class="session-info" id="session-info" style="display: none;">
+            <h2>Game Session</h2>
+            <p>Session Code: <span id="current-session-id"></span></p>
+            <p>Players: <span id="player-count">0</span></p>
+            <div class="session-actions">
+                <button id="start-session">Start Game</button>
+                <button id="leave-session">Leave Session</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/menu.js"></script>
+</body>
+</html>
